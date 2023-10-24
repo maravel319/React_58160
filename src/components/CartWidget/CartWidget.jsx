@@ -2,7 +2,7 @@ import carrito from './recursos/01.svg'
 
 const CartWidget = () => {
     return (
-        <div>
+        <div className='carrito'>
             <img style={{ width: '80px' }} src={carrito}/>
             0
             </div>

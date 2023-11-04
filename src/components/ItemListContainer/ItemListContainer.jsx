@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import {getProducts, getProductByCategory} from '../../asyncMock';
+import {getProducts, getProductsByCategory} from '../../asyncMock';
 import ItemList from '../ItemList/ItemList';
 import {useParams} from "react-router-dom";
 
@@ -10,7 +10,7 @@ import {useParams} from "react-router-dom";
         console.log(categoryId)
     
         useEffect(() => {
-            const asyncFunction = categoryId ? getProductByCategory : getProduct
+            const asyncFunction = categoryId ? getProductsByCategory : getProducts
     
             asyncFunction(categoryId)
                 .then(response =>{

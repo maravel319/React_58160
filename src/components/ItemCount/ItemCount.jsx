@@ -14,6 +14,7 @@ const decrement = () => {
     }
 }
 
+
 (quantity)=> console.log('cantidad agregada: ' + quantity)
 return(
     <div className= 'Counter'>

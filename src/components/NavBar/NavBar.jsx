@@ -7,11 +7,11 @@ const NavBar=()=>{
     return(
     <nav>
     <img src={imagenLogo} style={{ width: '200px' }}/>
-    <h3 className={`${estilos.color} ${estilos.fontSize}`}>Especias y Condimentos Käss </h3>
+    <Link to='/'><h3 className={`${estilos.color} ${estilos.fontSize}`}>Especias y Condimentos Käss </h3> </Link>
     <section>
-        <Link to='/category/especias'>Especias</Link>
-        <Link to='/category/Blends'>Blends</Link>
-        <Link to='/category/sales'>Sales</Link>
+        <Link to='/category/especias'> <button>Especias</button></Link>
+        <Link to='/category/blends'><button>Blends</button></Link>
+        <Link to='/category/sales'><button>Sales</button></Link>
     </section>
 <CartWidget/>
         </nav>

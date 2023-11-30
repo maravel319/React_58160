@@ -1,14 +1,19 @@
 import './App.css';
+import { useState, createContext } from 'react';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { CartProvider } from './context/CartContext';
+import { NotificationProvider } from './notification/NotificationContext';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+export const CartContext = createContext()
 
-function App() {
-
+const App= () => {
   return (
-    <div className="App">
+  <div className="App">
+    <NotificationProvider>
+    <CartProvider>
     <BrowserRouter>
     <NavBar/>
     <Routes>
@@ -17,7 +22,8 @@ function App() {
     <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
     </Routes>
     </BrowserRouter>
-
+    </CartProvider>
+    </NotificationProvider>
     </div>
   )
   }

@@ -1,11 +1,18 @@
+import { useContext } from 'react'
+import { useCart } from '../../context/CartContext'
+
+
+
 import carrito from './recursos/01.svg'
 
 const CartWidget = () => {
+    const { totalQuantity } = useCart()
+
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', backgroundColor:'#004173',  }}>
+            <button style={{ display: 'flex', flexDirection: 'column', backgroundColor:'#004173',  }}>
             <img style={{ width: '60px' }} src={carrito}/>
-            0
-            </div>
+            {totalQuantity}
+            </button>
     )
 }
 

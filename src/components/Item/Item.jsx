@@ -13,7 +13,7 @@ return (
             </h2>
         </header>
 
-        <picture>
+        <picture style={{width: '100px', height: 'auto'}}>
             <img src={img} alt={name} />  
         </picture>    
     <section>  

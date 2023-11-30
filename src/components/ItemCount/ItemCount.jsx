@@ -20,9 +20,10 @@ return(
     <div className= 'Counter'>
         <div className = 'Controls'> 
         <h1> Ya se ve →{quantity}←</h1>
-            <button className='button' onClick={decrement}>resta -</button> 
-            <h4 className='number'>{quantity}</h4>
-            <button className='button' onClick={increment}>suma +</button> 
+        <button className='button' onClick={increment}>suma +</button> 
+        <h4 className='number'>{quantity}</h4>
+        <button className='button' onClick={decrement}>resta -</button> 
+
         </div>
         <div>
             <button className='button' onClick={()=> onAdd(quantity)} disabled={!stock}>

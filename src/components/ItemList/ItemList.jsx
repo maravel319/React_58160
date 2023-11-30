@@ -2,7 +2,7 @@ import Item from '../Item/Item'
 
 const ItemList =({products})=>{
     return(
-        <div className="ListGroup">
+        <div style={{ padding: '10px'}}>
         {
     products.map(prod=> {
         return (
@@ -15,5 +15,6 @@ const ItemList =({products})=>{
 }
 
 export default ItemList
+
 
 

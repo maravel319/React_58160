@@ -4,6 +4,8 @@ import {Link} from "react-router-dom";
 const Item = ({id, name, img, price, stock}) => {
 
 return (
+    <div style={{ backgroundColor:'#004173', marginTop: '20px', padding:'15px'}}>
+    
     <article className="CardItem">
         <header className="Header">
             <h2 className="ItemHeader">
@@ -11,7 +13,7 @@ return (
             </h2>
         </header>
 
-        <picture className="itemImg">
+        <picture>
             <img src={img} alt={name} />  
         </picture>    
     <section>  
@@ -29,7 +31,7 @@ return (
         <Link to={`/item/${id}`}>Ver detalle</Link>
         </footer>
     </article>
-
+    </div>
 )
 }
 
